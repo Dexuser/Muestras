@@ -1,6 +1,8 @@
 import tkinter as tk
 from random import randint
 
+
+
 class Novia:
 
     def __init__(self):
