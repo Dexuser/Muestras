@@ -2,6 +2,34 @@
 import tkinter as tk
 from tkinter import ttk
 
+class dialogos:
+    
+    def __init__(self, root):
+        self.dialogo=tk.Toplevel(root)
+        self.label1=ttk.Label(self.dialogo, text="")
+        self.label1.grid(column=0, row=0, padx=5, pady=5)
+        self.valor=tk.StringVar()
+        self.entry=ttk.Entry(self.dialogo, textvariable=self.valor, width=10)
+        self.entry.grid(column=1, row=0, padx=5, pady=5)
+        self.entry.focus()
+        self.label2=ttk.Label(self.dialogo, text="")
+        self.label2.grid(column=0, row=1, padx=5, pady=5)
+        self.valor2=tk.StringVar()
+        self.entry2=ttk.Entry(self.dialogo, textvariable=self.valor2, width=10)
+        self.btn1=ttk.Button(self.dialogo, text="", )
+        self.btn1.grid(column=1, row=2, padx=5, pady=5)
+        self.entry2.grid(column=1, row=1)
+        self.dialogo.grab_set()
+        
+
+    def valores(self):
+        return (self.valor.get(), self.valor2.get())
+
+    def salir(self):
+        self.dialogo.destroy()
+
+# Aplicacion
+
 class Aplicacion:
     def __init__(self):
         self.ventana1=tk.Tk()
@@ -40,34 +68,6 @@ class Aplicacion:
         self.ventana1.geometry(self.dialogo_size.valores()[0]+"x"+self.dialogo_size.valores()[1])
 
 
-
-
-class dialogos:
-    
-    def __init__(self, root):
-        self.dialogo=tk.Toplevel(root)
-        self.label1=ttk.Label(self.dialogo, text="")
-        self.label1.grid(column=0, row=0, padx=5, pady=5)
-        self.valor=tk.StringVar()
-        self.entry=ttk.Entry(self.dialogo, textvariable=self.valor, width=10)
-        self.entry.grid(column=1, row=0, padx=5, pady=5)
-        self.entry.focus()
-        self.label2=ttk.Label(self.dialogo, text="")
-        self.label2.grid(column=0, row=1, padx=5, pady=5)
-        self.valor2=tk.StringVar()
-        self.entry2=ttk.Entry(self.dialogo, textvariable=self.valor2, width=10)
-        self.btn1=ttk.Button(self.dialogo, text="", )
-        self.btn1.grid(column=1, row=2, padx=5, pady=5)
-        self.entry2.grid(column=1, row=1)
-        self.dialogo.grab_set()
-        
-
-    def valores(self):
-        return (self.valor.get(), self.valor2.get())
-
-    def salir(self):
-        self.dialogo.destroy()
-
-# Aplicacion
-
 ventana1=Aplicacion()
+
+
