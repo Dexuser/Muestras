@@ -16,3 +16,4 @@ sql="""create table usuarios(
 cursor.execute(sql)
 connection.commit()
 connection.close()
+print()
