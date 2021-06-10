@@ -42,11 +42,11 @@ def promedio_sueldo(sueldo):            # go to line 58
 
 
 
-def promedio_inferior(promedio):       # go to line 60
+def promedio_inferior(promedio, sueldos):       # go to line 60
     
     for i in range(len(lista_empleados)):       # recorremos la lista de los empleados
 
-        if lista_sueldos[i] < promedio:         # y si el sueldo de dicho empleado es menor que el promedio (el sueldo y el empleado estan en la misma posicion en ambas listas)
+        if sueldos[i] < promedio:         # y si el sueldo de dicho empleado es menor que el promedio (el sueldo y el empleado estan en la misma posicion en ambas listas)
             print(f"el sueldo de {lista_empleados[i]} esta por debajo del promedio")    # se printea
 
 
@@ -61,4 +61,4 @@ sueldo_superior(lista_empleados,lista_sueldos) # rellenamos los parametros perso
 print()
 promedio=promedio_sueldo(lista_sueldos)         # rellenamos el parametro sueldo (go to line 33 again) y cuando se nos retorne el promedio, 
 print()                                         # guardarlo en la variable
-promedio_inferior(promedio)                     # Se rellena el parametro de la funcion, el promedio que tenemos guardado en la variable promedio
+promedio_inferior(promedio, lista_sueldos)                     # Se rellena el parametro de la funcion, el promedio que tenemos guardado en la variable promedio

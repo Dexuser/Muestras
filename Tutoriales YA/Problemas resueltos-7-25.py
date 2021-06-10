@@ -1,6 +1,6 @@
 # hacer una funcion que calcule la superficie de un rectangulo y la retorne
-# la funcion como parametros los valores de 2 de sus lados
-# en el bloque principal, cargar los dados de 2 rectagulos y ver cual es mas grande
+# la funcion recive como parametros los valores de 2 de sus lados
+# en el bloque principal, cargar los lados de 2 rectagulos diferentes y ver cual es mas grande
 
 
 def superficie_rectangulo(base,altura):     

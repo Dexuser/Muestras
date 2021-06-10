@@ -5,9 +5,9 @@
 
 
 def multiplicar(lista, mult):
-    for i in range(len(lista_valores)):
-        print(f"{lista_valores[i]}  x   {mult}  =   {lista_valores[i]*mult}")
-
+    for i in range(len(lista)):
+        prod = lista[i] * mult
+        print(f"{lista[i]}  x  {mult}   =  {prod}")
 
 
 #bloque principal.
