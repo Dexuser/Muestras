@@ -49,7 +49,6 @@ class Articulos:
     
     def consulta_mod(self, datos):
         try:
-            print("desde la base de datos , el dato es ", datos)
             cone=self.abrir()
             cursor=cone.cursor()
             sql="select descripcion, precio from articulos where codigo=?"
@@ -60,7 +59,6 @@ class Articulos:
     
     def modificacion(self, datos):
         try:
-            print("desde la base de datos la actualizacion es:", datos)
             cone=self.abrir()
             cursor=cone.cursor()
             sql="update articulos set descripcion=?, precio=? where codigo=?"
